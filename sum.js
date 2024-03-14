@@ -567,7 +567,7 @@ curcontent["Oplata"] = {
     				<div class="refill-window__amount-wrapper" id="amount-wrapper">\
 							<div class="refill-window__amount-input-wrapper">\
 								<div class="refill-window__pre-input">₽</div>\
-									<input class="refill-window__amount-input" placeholder="${refilAmountInput}" type="number" id="refill-window__amount-input" value="3я00">\
+									<input class="refill-window__amount-input" placeholder="${refilAmountInput}" type="number" id="refill-window__amount-input" value="100">\
 								</div>\
 							</div>\
 						<div class="refill-window__button-wrapper" id="buybtnwrap" onclick="OnClickBuyBtn(this)">\
