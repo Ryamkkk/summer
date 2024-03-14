@@ -550,6 +550,11 @@ curcontent["Oplata"] = {
                     <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 338 98" style="enable-background:new 0 0 338 98;" xml:space="preserve"><g id="Слой_2"><g><path class="st0" d="M159.1,55.8h-35.3c0.5,3.1,1.9,5.6,4.1,7.4c2.2,1.8,5,2.8,8.5,2.8c4.1,0,7.6-1.4,10.6-4.3l9.2,4.3c-2.3,3.3-5.1,5.7-8.3,7.3c-3.2,1.6-7,2.4-11.5,2.4c-6.9,0-12.4-2.2-16.8-6.5c-4.3-4.3-6.5-9.7-6.5-16.3c0-6.7,2.2-12.2,6.5-16.6c4.3-4.4,9.7-6.6,16.2-6.6c6.9,0,12.5,2.2,16.8,6.6c4.3,4.4,6.5,10.2,6.5,17.5L159.1,55.8z M148.2,47.2c-0.7-2.4-2.2-4.4-4.3-5.9c-2.1-1.5-4.6-2.3-7.4-2.3c-3.1,0-5.7,0.9-8.1,2.6c-1.4,1.1-2.8,3-4,5.7H148.2z" fill= "#FFFFFF"/><path class="st0" d="M168,30.8h11v4.5c2.5-2.1,4.7-3.6,6.8-4.4c2-0.8,4.1-1.2,6.2-1.2c4.3,0,8,1.5,11,4.5c2.5,2.6,3.8,6.4,3.8,11.4v28.9H196V55.4c0-5.2-0.2-8.7-0.7-10.4c-0.5-1.7-1.3-3-2.4-3.9c-1.2-0.9-2.6-1.3-4.3-1.3c-2.2,0-4.1,0.7-5.7,2.2c-1.6,1.5-2.7,3.5-3.3,6.2c-0.3,1.4-0.5,4.3-0.5,8.9v17.5h-11V30.8z" fill= "#FFFFFF"/><path class="st0" d="M238,29.7c4.1,0,8,1,11.6,3.1c3.6,2.1,6.5,4.9,8.5,8.4c2,3.5,3.1,7.4,3.1,11.5c0,4.1-1,8-3.1,11.6c-2,3.6-4.8,6.4-8.4,8.4s-7.4,3-11.7,3c-6.3,0-11.6-2.2-16.1-6.7c-4.4-4.5-6.7-9.9-6.7-16.3c0-6.8,2.5-12.5,7.5-17.1C227.2,31.6,232.3,29.7,238,29.7z M238.1,40c-3.4,0-6.2,1.2-8.5,3.6c-2.3,2.4-3.4,5.4-3.4,9.1c0,3.8,1.1,6.9,3.4,9.2c2.2,2.4,5.1,3.5,8.5,3.5s6.3-1.2,8.6-3.6c2.3-2.4,3.4-5.5,3.4-9.2c0-3.8-1.1-6.8-3.4-9.1C244.5,41.2,241.6,40,238.1,40z" fill= "#FFFFFF"/><path class="st0" d="M271.4,14.7h11v16.1h6.5v9.4h-6.5v34.3h-11V40.2h-5.6v-9.4h5.6V14.7z" fill= "#FFFFFF"/><path class="st1" d="M300.8,63.1c1.7,0,3.2,0.6,4.5,1.8c1.2,1.2,1.8,2.7,1.8,4.4s-0.6,3.2-1.8,4.5s-2.7,1.8-4.5,1.8c-1.7,0-3.2-0.6-4.5-1.8c-1.2-1.2-1.8-2.7-1.8-4.5s0.6-3.2,1.8-4.4C297.6,63.7,299,63.1,300.8,63.1z" fill= "#FBCD02"/></g></g><g><g id="Слой_3"><g><polygon class="st1" points="37.1,90 37.1,63.7 12.9,63.7 45.3,8.2 45.3,34.6 69,34.6 			" fill= "#FBCD02"/></g></g></g></svg>\
             </button>\
     			</li>\
+    			<li class="refill-window__payment" onclick="OnClickElement4(this)">\
+						<button class="refill-window__payment-btn" id="element4">\
+							<img class="refill-window__payment-icon" src="https://s3.timeweb.com/a3d1c97f-maps/Assets/telegram.svg">\
+						</button>\
+					</li>\
     			</ul>\
     			</div>\
     		<div class="refill-window__bonus"><span class="refill-window__bonus-text" id="bonus-text"></span></div>\
@@ -572,10 +577,12 @@ curcontent["Oplata"] = {
 let btn_unlocked = 0;
 
 function ResetBtns() {
-    let btn2 = document.getElementById('element1');
-    let btn3 = document.getElementById('element2');
-    let btn4 = document.getElementById('element3');
+    let btn1 = document.getElementById('element1');
+    let btn2 = document.getElementById('element2');
+    let btn3 = document.getElementById('element3');
+    let btn4 = document.getElementById('element4');
 
+    btn1.style.backgroundColor = "#1d1d26";
     btn2.style.backgroundColor = "#1d1d26";
     btn3.style.backgroundColor = "#1d1d26";
     btn4.style.backgroundColor = "#1d1d26";
@@ -626,6 +633,9 @@ if (btn_unlocked == 3) {
         window.open(generateUrlEnot());
     }
 }
+if (btn_unlocked == 4) {
+        window.open("https://t.me/sSupport212");
+    }
 }
 var MD5 = function (d) { result = M(V(Y(X(d), 8 * d.length))); return result.toLowerCase() }; function M(d) { for (var _, m = "0123456789ABCDEF", f = "", r = 0; r < d.length; r++)_ = d.charCodeAt(r), f += m.charAt(_ >>> 4 & 15) + m.charAt(15 & _); return f } function X(d) { for (var _ = Array(d.length >> 2), m = 0; m < _.length; m++)_[m] = 0; for (m = 0; m < 8 * d.length; m += 8)_[m >> 5] |= (255 & d.charCodeAt(m / 8)) << m % 32; return _ } function V(d) { for (var _ = "", m = 0; m < 32 * d.length; m += 8)_ += String.fromCharCode(d[m >> 5] >>> m % 32 & 255); return _ } function Y(d, _) { d[_ >> 5] |= 128 << _ % 32, d[14 + (_ + 64 >>> 9 << 4)] = _; for (var m = 1732584193, f = -271733879, r = -1732584194, i = 271733878, n = 0; n < d.length; n += 16) { var h = m, t = f, g = r, e = i; f = md5_ii(f = md5_ii(f = md5_ii(f = md5_ii(f = md5_hh(f = md5_hh(f = md5_hh(f = md5_hh(f = md5_gg(f = md5_gg(f = md5_gg(f = md5_gg(f = md5_ff(f = md5_ff(f = md5_ff(f = md5_ff(f, r = md5_ff(r, i = md5_ff(i, m = md5_ff(m, f, r, i, d[n + 0], 7, -680876936), f, r, d[n + 1], 12, -389564586), m, f, d[n + 2], 17, 606105819), i, m, d[n + 3], 22, -1044525330), r = md5_ff(r, i = md5_ff(i, m = md5_ff(m, f, r, i, d[n + 4], 7, -176418897), f, r, d[n + 5], 12, 1200080426), m, f, d[n + 6], 17, -1473231341), i, m, d[n + 7], 22, -45705983), r = md5_ff(r, i = md5_ff(i, m = md5_ff(m, f, r, i, d[n + 8], 7, 1770035416), f, r, d[n + 9], 12, -1958414417), m, f, d[n + 10], 17, -42063), i, m, d[n + 11], 22, -1990404162), r = md5_ff(r, i = md5_ff(i, m = md5_ff(m, f, r, i, d[n + 12], 7, 1804603682), f, r, d[n + 13], 12, -40341101), m, f, d[n + 14], 17, -1502002290), i, m, d[n + 15], 22, 1236535329), r = md5_gg(r, i = md5_gg(i, m = md5_gg(m, f, r, i, d[n + 1], 5, -165796510), f, r, d[n + 6], 9, -1069501632), m, f, d[n + 11], 14, 643717713), i, m, d[n + 0], 20, -373897302), r = md5_gg(r, i = md5_gg(i, m = md5_gg(m, f, r, i, d[n + 5], 5, -701558691), f, r, d[n + 10], 9, 38016083), m, f, d[n + 15], 14, -660478335), i, m, d[n + 4], 20, -405537848), r = md5_gg(r, i = md5_gg(i, m = md5_gg(m, f, r, i, d[n + 9], 5, 568446438), f, r, d[n + 14], 9, -1019803690), m, f, d[n + 3], 14, -187363961), i, m, d[n + 8], 20, 1163531501), r = md5_gg(r, i = md5_gg(i, m = md5_gg(m, f, r, i, d[n + 13], 5, -1444681467), f, r, d[n + 2], 9, -51403784), m, f, d[n + 7], 14, 1735328473), i, m, d[n + 12], 20, -1926607734), r = md5_hh(r, i = md5_hh(i, m = md5_hh(m, f, r, i, d[n + 5], 4, -378558), f, r, d[n + 8], 11, -2022574463), m, f, d[n + 11], 16, 1839030562), i, m, d[n + 14], 23, -35309556), r = md5_hh(r, i = md5_hh(i, m = md5_hh(m, f, r, i, d[n + 1], 4, -1530992060), f, r, d[n + 4], 11, 1272893353), m, f, d[n + 7], 16, -155497632), i, m, d[n + 10], 23, -1094730640), r = md5_hh(r, i = md5_hh(i, m = md5_hh(m, f, r, i, d[n + 13], 4, 681279174), f, r, d[n + 0], 11, -358537222), m, f, d[n + 3], 16, -722521979), i, m, d[n + 6], 23, 76029189), r = md5_hh(r, i = md5_hh(i, m = md5_hh(m, f, r, i, d[n + 9], 4, -640364487), f, r, d[n + 12], 11, -421815835), m, f, d[n + 15], 16, 530742520), i, m, d[n + 2], 23, -995338651), r = md5_ii(r, i = md5_ii(i, m = md5_ii(m, f, r, i, d[n + 0], 6, -198630844), f, r, d[n + 7], 10, 1126891415), m, f, d[n + 14], 15, -1416354905), i, m, d[n + 5], 21, -57434055), r = md5_ii(r, i = md5_ii(i, m = md5_ii(m, f, r, i, d[n + 12], 6, 1700485571), f, r, d[n + 3], 10, -1894986606), m, f, d[n + 10], 15, -1051523), i, m, d[n + 1], 21, -2054922799), r = md5_ii(r, i = md5_ii(i, m = md5_ii(m, f, r, i, d[n + 8], 6, 1873313359), f, r, d[n + 15], 10, -30611744), m, f, d[n + 6], 15, -1560198380), i, m, d[n + 13], 21, 1309151649), r = md5_ii(r, i = md5_ii(i, m = md5_ii(m, f, r, i, d[n + 4], 6, -145523070), f, r, d[n + 11], 10, -1120210379), m, f, d[n + 2], 15, 718787259), i, m, d[n + 9], 21, -343485551), m = safe_add(m, h), f = safe_add(f, t), r = safe_add(r, g), i = safe_add(i, e) } return Array(m, f, r, i) } function md5_cmn(d, _, m, f, r, i) { return safe_add(bit_rol(safe_add(safe_add(_, d), safe_add(f, i)), r), m) } function md5_ff(d, _, m, f, r, i, n) { return md5_cmn(_ & m | ~_ & f, d, _, r, i, n) } function md5_gg(d, _, m, f, r, i, n) { return md5_cmn(_ & f | m & ~f, d, _, r, i, n) } function md5_hh(d, _, m, f, r, i, n) { return md5_cmn(_ ^ m ^ f, d, _, r, i, n) } function md5_ii(d, _, m, f, r, i, n) { return md5_cmn(m ^ (_ | ~f), d, _, r, i, n) } function safe_add(d, _) { var m = (65535 & d) + (65535 & _); return (d >> 16) + (_ >> 16) + (m >> 16) << 16 | 65535 & m } function bit_rol(d, _) { return d << _ | d >>> 32 - _ }
 
@@ -683,6 +693,19 @@ function OnClickElement3(event) {
     UnLockBuyBtn();
     document.getElementById('bonus-text').innerText = "";
     document.getElementById('buybtn').removeAttribute("href");
+}
+
+function OnClickElement10(event) {
+    ResetBtns();
+
+    let element = document.getElementById('element4');
+    element.style.backgroundColor = colorgrayhover;
+    btn_unlocked = 4;
+    UnLockBuyBtn();
+    document.getElementById('bonus-text').innerText = "";
+    document.getElementById('buybtn').removeAttribute("href");
+    document.getElementById("amount-wrapper").style.display = "none";
+    document.getElementById('buybtn').innerText = "СВЯЗАТЬСЯ";
 }
 
 function OpenPay(el, usefade = true, zind = false) {
