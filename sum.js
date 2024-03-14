@@ -695,7 +695,7 @@ function OnClickElement3(event) {
     document.getElementById('buybtn').removeAttribute("href");
 }
 
-function OnClickElement10(event) {
+function OnClickElement4(event) {
     ResetBtns();
 
     let element = document.getElementById('element4');
