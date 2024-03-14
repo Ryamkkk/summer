@@ -675,7 +675,7 @@ function OnClickElement1(event) {
     UnLockBuyBtn();
     document.getElementById('bonus-text').innerText = "";
     document.getElementById('buybtn').removeAttribute("href");
-    document.getElementById("amount-wrapper").style.display = "none";
+    document.getElementById("amount-wrapper").style.display = "block";
     document.getElementById('buybtn').innerText = refilButton;
 }
 
@@ -688,7 +688,7 @@ function OnClickElement2(event) {
     UnLockBuyBtn();
     document.getElementById('bonus-text').innerText = "";
     document.getElementById('buybtn').removeAttribute("href");
-    document.getElementById("amount-wrapper").style.display = "none";
+    document.getElementById("amount-wrapper").style.display = "block";
     document.getElementById('buybtn').innerText = refilButton;
 }
 
@@ -701,7 +701,7 @@ function OnClickElement3(event) {
     UnLockBuyBtn();
     document.getElementById('bonus-text').innerText = "";
     document.getElementById('buybtn').removeAttribute("href");
-    document.getElementById("amount-wrapper").style.display = "none";
+    document.getElementById("amount-wrapper").style.display = "block";
     document.getElementById('buybtn').innerText = refilButton;
 }
 
