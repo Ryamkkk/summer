@@ -3483,7 +3483,7 @@ button.refill-window__close {
 .refill-window__payment-icon {
     max-width:70px
 }
-.refill-window__payment-icon:nth-child(4) {
+.refill-window__payment-icon:nth-child(3) {
     max-width:90px
 }
 .other_crypto {
