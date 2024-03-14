@@ -567,7 +567,7 @@ curcontent["Oplata"] = {
 								</div>\
 							</div>\
 						<div class="refill-window__button-wrapper" id="buybtnwrap" onclick="OnClickBuyBtn(this)">\
-							<a class="refill-window__button--disabled" id="buybtn" target="_blank">"ПОПОЛНИТЬ"</a>\
+							<a class="refill-window__button--disabled" id="buybtn" target="_blank">ПОПОЛНИТЬ</a>\
 					</div>\
     			</div>\
     		</div>\
