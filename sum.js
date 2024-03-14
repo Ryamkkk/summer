@@ -526,10 +526,11 @@ curcontent["kit-free"] = {
 
 //#endregion
 
-refilAmountInput = "Введите сумму"
-refilButton = "ПОПОЛНИТЬ"
-contactButton = "СВЯЗАТЬСЯ"
-
+const pay = {
+    refilAmountInput: "Введите сумму",
+    refilButton: "ПОПОЛНИТЬ",
+    contactButton: "СВЯЗАТЬСЯ",
+}
 curcontent["Oplata"] = {
     xcon: '\
     	<div class="refill-window__header">\
@@ -567,11 +568,11 @@ curcontent["Oplata"] = {
     				<div class="refill-window__amount-wrapper" id="amount-wrapper">\
 							<div class="refill-window__amount-input-wrapper">\
 								<div class="refill-window__pre-input">₽</div>\
-									<input class="refill-window__amount-input" placeholder="${refilAmountInput}" type="number" id="refill-window__amount-input" value="100">\
+									<input class="refill-window__amount-input" placeholder="${pay.refilAmountInput}" type="number" id="refill-window__amount-input" value="100">\
 								</div>\
 							</div>\
 						<div class="refill-window__button-wrapper" id="buybtnwrap" onclick="OnClickBuyBtn(this)">\
-							<a class="refill-window__button--disabled" id="buybtn" target="_blank">${refilButton}</a>\
+							<a class="refill-window__button--disabled" id="buybtn" target="_blank">${pay.refilButton}</a>\
 					</div>\
     			</div>\
     		</div>\
@@ -676,7 +677,7 @@ function OnClickElement1(event) {
     document.getElementById('bonus-text').innerText = "";
     document.getElementById('buybtn').removeAttribute("href");
     document.getElementById("amount-wrapper").style.display = "block";
-    document.getElementById('buybtn').innerText = refilButton;
+    document.getElementById('buybtn').innerText = pay.refilButton;
 }
 
 function OnClickElement2(event) {
@@ -689,7 +690,7 @@ function OnClickElement2(event) {
     document.getElementById('bonus-text').innerText = "";
     document.getElementById('buybtn').removeAttribute("href");
     document.getElementById("amount-wrapper").style.display = "block";
-    document.getElementById('buybtn').innerText = refilButton;
+    document.getElementById('buybtn').innerText = pay.refilButton;
 }
 
 function OnClickElement3(event) {
@@ -702,7 +703,7 @@ function OnClickElement3(event) {
     document.getElementById('bonus-text').innerText = "";
     document.getElementById('buybtn').removeAttribute("href");
     document.getElementById("amount-wrapper").style.display = "block";
-    document.getElementById('buybtn').innerText = refilButton;
+    document.getElementById('buybtn').innerText = pay.refilButton;
 }
 
 function OnClickElement4(event) {
@@ -715,7 +716,7 @@ function OnClickElement4(event) {
     document.getElementById('bonus-text').innerText = "";
     document.getElementById('buybtn').removeAttribute("href");
     document.getElementById("amount-wrapper").style.display = "none";
-    document.getElementById('buybtn').innerText = contactButton;
+    document.getElementById('buybtn').innerText = pay.contactButton;
 }
 
 function OpenPay(el, usefade = true, zind = false) {
