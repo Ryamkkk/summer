@@ -526,6 +526,10 @@ curcontent["kit-free"] = {
 
 //#endregion
 
+refilAmountInput = "Введите сумму"
+refilButton = "ПОПОЛНИТЬ"
+contactButton = "СВЯЗАТЬСЯ"
+
 curcontent["Oplata"] = {
     xcon: '\
     	<div class="refill-window__header">\
@@ -560,15 +564,15 @@ curcontent["Oplata"] = {
     		<div class="refill-window__bonus"><span class="refill-window__bonus-text" id="bonus-text"></span></div>\
     		<div class="refill-window__content__pay">\
     			<div class="refill-window__payment-info">\
-    				<div class="refill-window__amount-wrapper">\
-    					<div class="refill-window__amount-input-wrapper">\
-    						<div class="refill-window__pre-input">₽</div>\
-    							<input class="refill-window__amount-input" placeholder="Введите сумму" type="number" id="refill-window__amount-input" value="500">\
-    						</div>\
-    					</div>\
-    				<div class="refill-window__button-wrapper" id="buybtnwrap" onclick="OnClickBuyBtn(this)">\
-    					<a class="refill-window__button--disabled" id="buybtn" target="_blank">пополнить</a>\
-    				</div>\
+    				<div class="refill-window__amount-wrapper" id="amount-wrapper">\
+							<div class="refill-window__amount-input-wrapper">\
+								<div class="refill-window__pre-input">₽</div>\
+									<input class="refill-window__amount-input" placeholder="${refilAmountInput}" type="number" id="refill-window__amount-input" value="3я00">\
+								</div>\
+							</div>\
+						<div class="refill-window__button-wrapper" id="buybtnwrap" onclick="OnClickBuyBtn(this)">\
+							<a class="refill-window__button--disabled" id="buybtn" target="_blank">${refilButton}</a>\
+					</div>\
     			</div>\
     		</div>\
     	</div></div>'
@@ -671,6 +675,8 @@ function OnClickElement1(event) {
     UnLockBuyBtn();
     document.getElementById('bonus-text').innerText = "";
     document.getElementById('buybtn').removeAttribute("href");
+    document.getElementById("amount-wrapper").style.display = "none";
+    document.getElementById('buybtn').innerText = refilButton;
 }
 
 function OnClickElement2(event) {
@@ -682,6 +688,8 @@ function OnClickElement2(event) {
     UnLockBuyBtn();
     document.getElementById('bonus-text').innerText = "";
     document.getElementById('buybtn').removeAttribute("href");
+    document.getElementById("amount-wrapper").style.display = "none";
+    document.getElementById('buybtn').innerText = refilButton;
 }
 
 function OnClickElement3(event) {
@@ -693,6 +701,8 @@ function OnClickElement3(event) {
     UnLockBuyBtn();
     document.getElementById('bonus-text').innerText = "";
     document.getElementById('buybtn').removeAttribute("href");
+    document.getElementById("amount-wrapper").style.display = "none";
+    document.getElementById('buybtn').innerText = refilButton;
 }
 
 function OnClickElement4(event) {
@@ -705,7 +715,7 @@ function OnClickElement4(event) {
     document.getElementById('bonus-text').innerText = "";
     document.getElementById('buybtn').removeAttribute("href");
     document.getElementById("amount-wrapper").style.display = "none";
-    document.getElementById('buybtn').innerText = "СВЯЗАТЬСЯ";
+    document.getElementById('buybtn').innerText = contactButton;
 }
 
 function OpenPay(el, usefade = true, zind = false) {
