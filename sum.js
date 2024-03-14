@@ -774,8 +774,8 @@ function OnClickElement5(event) {
     btn_unlocked = 5;
     UnLockBuyBtn();
     document.getElementById('bonus-text').innerText = "";
-    document.getElementById('buybtn').removeAttribute("block");
-    document.getElementById("amount-wrapper").style.display = "none";
+    document.getElementById('buybtn').removeAttribute("href");
+    document.getElementById("amount-wrapper").style.display = "block";
     document.getElementById('buybtn').innerText = "ПОПОЛНИТЬ";
 }
 
@@ -787,8 +787,8 @@ function OnClickElement6(event) {
     btn_unlocked = 6;
     UnLockBuyBtn();
     document.getElementById('bonus-text').innerText = "";
-    document.getElementById('buybtn').removeAttribute("block");
-    document.getElementById("amount-wrapper").style.display = "none";
+    document.getElementById('buybtn').removeAttribute("href");
+    document.getElementById("amount-wrapper").style.display = "block";
     document.getElementById('buybtn').innerText = "ПОПОЛНИТЬ";
 }
 
