@@ -572,11 +572,10 @@ curcontent["Oplata"] = {
 let btn_unlocked = 0;
 
 function ResetBtns() {
-    let btn2 = document.getElementById('element2');
-    let btn3 = document.getElementById('element3');
-    let btn4 = document.getElementById('element4');
+    let btn2 = document.getElementById('element1');
+    let btn3 = document.getElementById('element2');
+    let btn4 = document.getElementById('element3');
 
-    btn1.style.backgroundColor = "#1d1d26";
     btn2.style.backgroundColor = "#1d1d26";
     btn3.style.backgroundColor = "#1d1d26";
     btn4.style.backgroundColor = "#1d1d26";
