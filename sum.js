@@ -597,18 +597,6 @@ function UnLockBuyBtn() {
 
 function OnClickBuyBtn(event)
 {
-    if (btn_unlocked == 1) {
-        var inputval = document.getElementById('refill-window__amount-input').value;
-        var inputfloat = parseFloat(inputval);
-        if (inputfloat < 30 || isNaN(inputfloat)) {
-            document.getElementById('bonus-text').innerText = "Минимальная сумма - 30 RUB.";
-            return false;
-        }
-        else {
-            document.getElementById('bonus-text').innerText = "";
-            window.open(generateUrlLava());
-        }
-    }
   if (btn_unlocked == 2) {
     var inputval = document.getElementById('refill-window__amount-input').value;
     var inputfloat = parseFloat(inputval);
